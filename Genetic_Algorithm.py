@@ -15,23 +15,8 @@ def cal_pop_fitness(pop):
     fitness = []
     for i in range(pop.shape[0]):
         fit = run_game_with_ML(display,clock,pop[i])
-        #score = collision_with_apple(score)
         print('fitness value of chromosome '+ str(i) +' :  ', fit , end ="          ")
-        #Figura
-        #plot_scores.append(fit)
-        #total_score = fit
-        #mean_score = total_score / i
-        #plot_mean_scores.append(mean_score)
-        #print('score act = ')
-        #print(str(score))
         fitness.append(fit)
-
-    
-    #plot_scores.append(fit)
-    #total_score += i
-    #mean_score = total_score / fit
-    #plot_mean_scores.append(mean_score)
-    #plot(plot_scores, plot_mean_scores)
 
     return np.array(fitness)
     
@@ -81,22 +66,3 @@ def mutation(offspring_crossover):
         offspring_crossover[idx, i] = offspring_crossover[idx, i] + random_value
 
     return offspring_crossover
-
-#def graf():
-    #if done:
-            # train long memory, plot result
-     #       game.reset()
-       #     agent.n_games += 1
-      #      agent.train_long_memory()
-
-        #    if score > record:
-         #       record = score
-          #      agent.model.save()
-
-           # print('Game', agent.n_games, 'Score', score, 'Record:', record)
-
-            #plot_scores.append(score)
-           # total_score += score
-            #mean_score = total_score / agent.n_games
-           # plot_mean_scores.append(mean_score)
-            #plot(plot_scores, plot_mean_scores)

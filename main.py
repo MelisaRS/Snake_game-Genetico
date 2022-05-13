@@ -16,8 +16,8 @@ num_weights = n_x*n_h + n_h*n_h2 + n_h2*n_y
 pop_size = (sol_per_pop,num_weights)
 
 #Creating the initial population.
-#new_population = np.random.choice(np.arange(-1,1,step=0.01),size=pop_size,replace=True)
-new_population = np.random.choice(np.arange(-1,1,step=0.0001),size=pop_size,replace=True)
+new_population = np.random.choice(np.arange(-1,1,step=0.01),size=pop_size,replace=True)
+#new_population = np.random.choice(np.arange(-1,1,step=100),size=pop_size,replace=True)
 num_generations = 600
 
 num_parents_mating = 20

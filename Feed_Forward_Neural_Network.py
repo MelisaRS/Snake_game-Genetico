@@ -8,10 +8,6 @@ W1_shape = (9,7)
 W2_shape = (15,9)
 W3_shape = (3,15)
 
-# n_x -> no. of input units
-# n_h -> no. of units in hidden layer 1
-# n_h2 -> no. of units in hidden layer 2
-# n_y -> no. of output units
 
 def get_weights_from_encoded(individual):
     W1 = individual[0:W1_shape[0] * W1_shape[1]]

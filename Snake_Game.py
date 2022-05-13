@@ -174,7 +174,6 @@ def play_game(snake_start, snake_position, apple_position, button_direction, sco
         pygame.display.set_caption("SCORE: " + str(score))
         pygame.display.update()
         clock.tick(50000)
-        #clock.tick(30)
 
         return snake_position, apple_position, score
 
@@ -197,4 +196,3 @@ white = (255,255,255)
 pygame.init()
 display=pygame.display.set_mode((display_width,display_height))
 clock=pygame.time.Clock()
-#clock=pygame.time.Clock(1)

@@ -4,8 +4,8 @@ from Feed_Forward_Neural_Network import *
 def run_game_with_ML(display, clock, weights):
     max_score = 0
     avg_score = 0
-    #test_games = 1
-    test_games = 10
+    #test_games = 1 #son 1 juegos por cromosoma para el traning (se puede ocupar cualquiera de los 2)
+    test_games = 5 #son 5 juegos por cromosoma para el traning
     score1 = 0
     steps_per_game = 2500 #2500 pasos en un juego
     score2 = 0
@@ -54,19 +54,13 @@ def run_game_with_ML(display, clock, weights):
                                                               button_direction, score, display, clock)
 
             if score > max_score:
-                max_score = score
-                #print("maximo score DENTRO = " + str(max_score))
-
-            #print("maximo score INTERMEDIO = " + str(max_score))
-                
+                max_score = score                
 
             if count_same_direction > 8 and predicted_direction != 0:
                 score2 -= 1
             else:
                 score2 += 2
         
-        
-    #print("maximo score FUERA = " + str(max_score))
     print("maximo score = " + str(max_score))
 
     return score1 + score2 + max_score * 5000
